@@ -26,7 +26,7 @@
                 if($usuario['User']['perfil'] == 1)
                     $perfil = "Administrador";
                 else
-                    $perfil = "Alumno";
+                    $perfil = "Usuario";
                     
                 if($usuario['User']['estado'] == 1)
                     $estado = "Habilitado";

@@ -8,7 +8,7 @@
         echo $this->Form->input('nombre', array('label' => 'Nombre', 'class' => 'form-control'));
         echo $this->Form->input('username', array('label' => 'Correo', 'class' => 'form-control'));
         echo $this->Form->input('password', array('label' => 'Contraseña', 'value' => '', 'class' => 'form-control'));
-        echo $this->Form->input('perfil', array('label' => 'Tipo Usuario', 'class' => 'form-control', 'type' => 'select', 'options' => array('1' => 'Administrador', '2' => 'Alumno')));
+        echo $this->Form->input('perfil', array('label' => 'Tipo Usuario', 'class' => 'form-control', 'type' => 'select', 'options' => array('1' => 'Administrador', '2' => 'Usuario')));
         echo $this->Form->input('estado', array('label' => 'Estado', 'class' => 'form-control', 'type' => 'select', 'options' => array('1' => 'Habilitado', '2' => 'No habilitado')));
         echo '<button type="submit" class="btn btn-primary">Modificar Usuario</button>';
     }

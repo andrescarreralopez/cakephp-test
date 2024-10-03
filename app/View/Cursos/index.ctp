@@ -19,7 +19,7 @@
                     <th>Nombre</th>
                     <th>Descripción</th>
                     <th>Fecha Inicio</th>
-                    <th>Fecha Fin</th>
+                    <th>Fecha Término</th>
                     <?php if($user['perfil'] == 1): ?>
                         <th>Modificar</th>
                         <th>Eliminar</th>
