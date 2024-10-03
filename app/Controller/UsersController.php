@@ -119,10 +119,14 @@
             if(!empty($inscrito)){
                 $this->Session->setFlash('No es posible eliminar el usuario debido a que se encuentra inscrito en uno o más cursos. Por favor remueva al alumno de los cursos correspondientes y vuelva a intentarlo.', 'default', array('class' => 'alert alert-danger'));
                 return $this->redirect(array('action' => 'index'));
+            } elseif($this->Auth->User('id') == $id) {
+                $this->Session->setFlash('No es posible eliminar el usuario que actualmente ha iniciado sesión', 'default', array('class' => 'alert alert-danger'));
+                return $this->redirect(array('action' => 'index'));
+            } else {
+                $this->User->delete($id);
+                $this->Session->setFlash('El usuario ha sido eliminado', 'default', array('class' => 'alert alert-success'));
+                return $this->redirect(array('action' => 'index'));
             }
-            $this->User->delete($id);
-            $this->Session->setFlash('El usuario ha sido eliminado', 'default', array('class' => 'alert alert-success'));
-            return $this->redirect(array('action' => 'index'));
                 
 
             $this->Session->setFlash('No ha sido posible eliminar el usuario', 'default', array('class' => 'alert alert-danger'));
